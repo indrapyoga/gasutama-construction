@@ -82,8 +82,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section className="w-full flex flex-col gap-1">
-        <div className="relative h-[35vh] flex items-center">
+      <section className="w-full flex flex-col gap-1 lg:grid lg:grid-cols-3 lg:gap-0">
+        <div className="relative h-[35vh] flex items-center lg:h-[50vh] lg:p-10">
           <div className="absolute inset-0 bg-private bg-center bg-cover px-4 py-16"></div>
           <div className="absolute inset-0 bg-customDarkBlue bg-opacity-40 z-0"></div>
           <div className="absolute flex flex-col p-3 gap-4">
@@ -99,7 +99,7 @@ const Home = () => {
             </span>
           </div>
         </div>
-        <div className="relative h-[35vh] flex items-center">
+        <div className="relative h-[35vh] flex items-center lg:h-[50vh] lg:p-10">
           <div className="absolute inset-0 bg-mansion bg-center bg-cover px-4 py-16"></div>
           <div className="absolute inset-0 bg-customDarkBlue bg-opacity-40 z-0"></div>
           <div className="absolute flex flex-col p-3 gap-4">
@@ -115,7 +115,7 @@ const Home = () => {
             </span>
           </div>
         </div>
-        <div className="relative h-[35vh] flex items-center">
+        <div className="relative h-[35vh] flex items-center lg:h-[50vh] lg:p-10">
           <div className="absolute inset-0 bg-building bg-center bg-cover px-4 py-16"></div>
           <div className="absolute inset-0 bg-customDarkBlue bg-opacity-40 z-0"></div>
           <div className="absolute flex flex-col p-3 gap-4">
@@ -133,61 +133,67 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="flex flex-col py-10 bg-customDarkBlue">
-        <Carousel autoplay dots={false}>
-          <div className="relative h-[45vh] w-full">
-            <img
-              src={Architecture1}
-              alt=""
-              className="h-full w-full object-cover"
-            />
-            <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-            <div className="absolute bottom-10 flex flex-col px-10 text-white">
-              <span className="text-neutral-400 text-[12px]">
-                PRIVATE CLIENTS
-              </span>
-              <span className="text-[24px] font-semibold">INTERIOR</span>
+      <section className="flex flex-col py-10 bg-customDarkBlue lg:flex-row lg:py-0">
+        <div className="lg:w-[57vw] lg:h-full">
+          <Carousel autoplay dots={false}>
+            <div className="relative h-[45vh] w-full lg:h-[70vh]">
+              <img
+                src={Architecture1}
+                alt=""
+                className="h-full w-full object-cover"
+              />
+              <div className="bg-black bg-opacity-50 absolute inset-0"></div>
+              <div className="absolute bottom-10 flex flex-col px-10 text-white">
+                <span className="text-neutral-400 text-[12px]">
+                  PRIVATE CLIENTS
+                </span>
+                <span className="text-[24px] font-semibold">INTERIOR</span>
+              </div>
             </div>
-          </div>
-          <div className="relative h-[45vh] w-full">
-            <img
-              src={Architecture2}
-              alt=""
-              className="h-full w-full object-cover"
-            />
-            <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-            <div className="absolute bottom-10 flex flex-col px-10 text-white">
-              <span className="text-neutral-400 text-[12px]">
-                PRIVATE CLIENTS
-              </span>
-              <span className="text-[24px] font-semibold">
-                DESIGNER BUILDING
-              </span>
+            <div className="relative h-[45vh] w-full lg:h-[70vh]">
+              <img
+                src={Architecture2}
+                alt=""
+                className="h-full w-full object-cover"
+              />
+              <div className="bg-black bg-opacity-50 absolute inset-0"></div>
+              <div className="absolute bottom-10 flex flex-col px-10 text-white">
+                <span className="text-neutral-400 text-[12px]">
+                  PRIVATE CLIENTS
+                </span>
+                <span className="text-[24px] font-semibold">
+                  DESIGNER BUILDING
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="relative h-[45vh] w-full">
-            <img
-              src={Architecture3}
-              alt=""
-              className="h-full w-full object-cover"
-            />
-            <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-            <div className="absolute bottom-10 flex flex-col px-10 text-white">
-              <span className="text-neutral-400 text-[12px]">
-                PRIVATE CLIENTS
-              </span>
-              <span className="text-[24px] font-semibold">ATHAYA CLUSTER</span>
+            <div className="relative h-[45vh] w-full lg:h-[70vh]">
+              <img
+                src={Architecture3}
+                alt=""
+                className="h-full w-full object-cover"
+              />
+              <div className="bg-black bg-opacity-50 absolute inset-0"></div>
+              <div className="absolute bottom-10 flex flex-col px-10 text-white">
+                <span className="text-neutral-400 text-[12px]">
+                  PRIVATE CLIENTS
+                </span>
+                <span className="text-[24px] font-semibold">
+                  ATHAYA CLUSTER
+                </span>
+              </div>
             </div>
-          </div>
-        </Carousel>
-        <div className="flex flex-col gap-7 py-4 px-10">
-          <span className="text-white text-[37px] font-thin">Our Work</span>
-          <span className="text-white text-[14px]">
+          </Carousel>
+        </div>
+        <div className="flex flex-col gap-7 py-4 px-10 lg:justify-center lg:px-32 lg:flex-1 lg:h-full">
+          <span className="text-white text-[37px] font-thin lg:text-[60px]">
+            Our Work
+          </span>
+          <span className="text-white text-[14px] lg:text-[18px]">
             It is our signature dedication to quality that enables us to offer a
             superior service and products, from initial concept right through to
             final delivery.
           </span>
-          <div className="flex border border-white justify-center p-3">
+          <div className="flex border border-white justify-center p-3 lg:text-[14px] lg:mr-auto">
             <span className="text-white uppercase font-semibold">
               see more projects
             </span>
@@ -195,12 +201,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col py-10 bg-customDarkBlue">
-        <div className="relative h-[45vh] w-full">
+      <section className="flex flex-col py-10 bg-customDarkBlue lg:flex-row-reverse lg:py-0">
+        <div className="relative h-[45vh] w-full lg:w-[57vw] lg:h-[70vh]">
           <img
             src={Architecture1}
             alt=""
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover "
           />
           <div className="bg-black bg-opacity-50 absolute inset-0"></div>
           <div className="absolute bottom-10 flex flex-col px-10 text-white">
@@ -210,7 +216,7 @@ const Home = () => {
             <span className="text-[24px] font-semibold">YOUTUBE</span>
           </div>
         </div>
-        <div className="flex flex-col gap-7 py-4 px-10">
+        <div className="flex flex-col gap-7 py-4 px-10 lg:flex-1 lg:px-32 lg:justify-center lg:h-[70vh]">
           <span className="text-white text-[37px] font-thin">What We Do</span>
           <span className="text-white text-[14px]">
             Recognised for exceptional designs on a global scale, Gasutama
@@ -218,7 +224,7 @@ const Home = () => {
             to each individual project, offering bespoke architecture services
             to meet each client's demanding needs
           </span>
-          <div className="flex border border-white justify-center p-3">
+          <div className="flex border border-white justify-center p-3 lg:mr-auto">
             <span className="text-white uppercase font-semibold">
               see our services
             </span>
@@ -228,8 +234,8 @@ const Home = () => {
 
       {/* ABOUT US */}
 
-      <section className="flex flex-col py-10 bg-customDarkBlue">
-        <div className="relative h-[45vh] w-full">
+      <section className="flex flex-col py-10 bg-customDarkBlue lg:flex-row lg:py-0">
+        <div className="relative h-[45vh] w-full lg:w-[57vw] lg:h-[70vh]">
           <img
             src={Architecture3}
             alt=""
@@ -243,7 +249,7 @@ const Home = () => {
             <span className="text-[24px] font-semibold">YOUTUBE</span>
           </div>
         </div>
-        <div className="flex flex-col gap-7 py-4 px-10">
+        <div className="flex flex-col gap-7 py-4 px-10 lg:flex-1 lg:justify-center">
           <span className="text-white text-[37px] font-thin">About Us</span>
           <span className="text-white text-[14px]">
             Founded in 2003, our world leading architectural practice has
@@ -252,7 +258,7 @@ const Home = () => {
             meet their specific requirements and providing a seamless delivery
             of their desired scheme
           </span>
-          <div className="flex border border-white justify-center p-3">
+          <div className="flex border border-white justify-center p-3 lg:mr-auto">
             <span className="text-white uppercase font-semibold">
               FIND out more
             </span>
