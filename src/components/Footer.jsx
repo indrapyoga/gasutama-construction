@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="bg-customDarkBlue px-2 py-20 flex flex-col w-full text-white lg:border-t-2 lg:gap-20 lg:px-20">
+    <div className="bg-customDarkBlue px-2 py-20 flex flex-col w-full text-white lg:border-t-2 lg:gap-20 lg:px-20 gap-10">
       <div className="gap-5 flex flex-col lg:flex-row lg:justify-evenly">
         <div className="useful flex flex-col gap-3">
           <span className="font-semibold text-lg">Useful Links</span>

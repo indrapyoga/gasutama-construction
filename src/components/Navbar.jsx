@@ -1,18 +1,38 @@
 import Logo from "../assets/logo.png";
 import { Twirl as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Navbar = () => {
   const [toggled, setToggled] = useState(false);
   const onToggle = () => {
     setToggled(!toggled);
   };
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+      setScrollPosition(currentPosition);
+    };
+
+    // Add scroll event listener when component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove scroll event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // E
   return (
     <div
-      className={`flex flex-col w-full absolute z-40 ${
+      className={`flex flex-col w-full fixed z-40 ${
         toggled ? "lg:relative" : ""
       }`}
     >
-      <div className="flex justify-between py-2 px-6 items-center h-[10vh] z-10">
+      <div
+        className={`flex justify-between py-2 px-6 items-center h-[10vh] z-10 ${
+          scrollPosition > 0 ? "bg-customDarkBlue bg-opacity-80 shadow-lg" : ""
+        } transition-all duration-500 ease-in fixed w-full`}
+      >
         <img src={Logo} alt="" className="h-8" />
         <Hamburger size={18} color="#ffff" onToggle={() => onToggle()} />
       </div>
