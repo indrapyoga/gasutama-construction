@@ -10,8 +10,10 @@ import {
   FaPinterest,
   FaYoutube,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative w-full box-border">
       <Navbar className="" />
@@ -53,7 +55,10 @@ const Hero = () => {
         </span>
         <div className="flex flex-col lg:flex lg:flex-row lg:items-center justify-center lg:justify-between">
           <div className="flex gap-4">
-            <div className="bg-white p-4 rounded-sm flex justify-center items-center font-semibold lg:w-56">
+            <div
+              onClick={() => navigate("/our-work")}
+              className="bg-white p-4 rounded-sm flex justify-center items-center font-semibold lg:w-56 cursor-pointer"
+            >
               <span>BROWSE OUR WORK</span>
             </div>
             <div className="border border-white text-white uppercase p-4 rounded-sm lg:flex justify-center items-center font-semibold lg:w-72 hidden lg:visible">

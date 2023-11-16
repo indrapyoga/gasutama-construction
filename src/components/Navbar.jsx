@@ -64,6 +64,7 @@ const Navbar = () => {
           </span>
         </div>
         <div
+          onClick={() => navigate("/our-work")}
           className={`h-[18vh] w-full bg-customDarkBlue cursor-pointer flex justify-center items-center lg:h-screen lg:absolute lg:left-[40vw] ${
             toggled ? "lg:w-[20vw]" : "lg:w-0"
           } lg:hover:bg-building lg:hover:bg-cover lg:transition-all lg:duration-500`}
@@ -73,6 +74,7 @@ const Navbar = () => {
           </span>
         </div>
         <div
+          onClick={() => navigate("/about-us")}
           className={`h-[18vh] w-full bg-customDarkBlue cursor-pointer flex justify-center items-center lg:h-screen lg:absolute lg:left-[60vw] ${
             toggled ? "lg:w-[20vw]" : "lg:w-0"
           } lg:hover:bg-private lg:hover:bg-cover lg:transition-all lg:duration-500`}
@@ -82,6 +84,7 @@ const Navbar = () => {
           </span>
         </div>
         <div
+          onClick={() => navigate("/contact")}
           className={`h-[18vh] w-full bg-customDarkBlue cursor-pointer flex justify-center items-center lg:h-screen lg:absolute lg:left-[80vw] ${
             toggled ? "lg:w-[20vw]" : "lg:w-0"
           } lg:hover:bg-building lg:hover:bg-cover lg:transition-all lg:duration-500`}
