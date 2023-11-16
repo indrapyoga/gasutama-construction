@@ -1,6 +1,7 @@
 import Logo from "../assets/logo.png";
 import { Twirl as Hamburger } from "hamburger-react";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [toggled, setToggled] = useState(false);
   const onToggle = () => {
@@ -8,6 +9,7 @@ const Navbar = () => {
   };
 
   const [scrollPosition, setScrollPosition] = useState(0);
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       const currentPosition = window.scrollY;
@@ -44,14 +46,16 @@ const Navbar = () => {
       >
         <div className="h-[10vh] w-full bg-customLightBlue -z-10 lg:hidden"></div>
         <div
-          className={`h-[18vh] w-full bg-customDarkBlue flex justify-center items-center lg:h-screen lg:absolute lg:left-[0vw] ${
+          onClick={() => navigate("/")}
+          className={`h-[18vh] w-full bg-customDarkBlue cursor-pointer flex justify-center items-center lg:h-screen lg:absolute lg:left-[0vw] ${
             toggled ? "lg:w-[20vw]" : "lg:w-0"
           } lg:hover:bg-private lg:hover:bg-cover lg:hover:bg-fill lg:transition-all lg:duration-500`}
         >
           <span className={`mx-auto ${toggled ? "" : "lg:hidden"}`}>Home</span>
         </div>
         <div
-          className={`h-[18vh] w-full bg-customDarkBlue flex justify-center items-center lg:h-screen lg:absolute lg:left-[20vw] ${
+          onClick={() => navigate("/what-we-do")}
+          className={`h-[18vh] w-full bg-customDarkBlue cursor-pointer flex justify-center items-center lg:h-screen lg:absolute lg:left-[20vw] ${
             toggled ? "lg:w-[20vw]" : "lg:w-0"
           } lg:hover:bg-mansion lg:hover:bg-cover lg:transition-all lg:duration-500 `}
         >
@@ -60,7 +64,7 @@ const Navbar = () => {
           </span>
         </div>
         <div
-          className={`h-[18vh] w-full bg-customDarkBlue flex justify-center items-center lg:h-screen lg:absolute lg:left-[40vw] ${
+          className={`h-[18vh] w-full bg-customDarkBlue cursor-pointer flex justify-center items-center lg:h-screen lg:absolute lg:left-[40vw] ${
             toggled ? "lg:w-[20vw]" : "lg:w-0"
           } lg:hover:bg-building lg:hover:bg-cover lg:transition-all lg:duration-500`}
         >
@@ -69,7 +73,7 @@ const Navbar = () => {
           </span>
         </div>
         <div
-          className={`h-[18vh] w-full bg-customDarkBlue flex justify-center items-center lg:h-screen lg:absolute lg:left-[60vw] ${
+          className={`h-[18vh] w-full bg-customDarkBlue cursor-pointer flex justify-center items-center lg:h-screen lg:absolute lg:left-[60vw] ${
             toggled ? "lg:w-[20vw]" : "lg:w-0"
           } lg:hover:bg-private lg:hover:bg-cover lg:transition-all lg:duration-500`}
         >
@@ -78,7 +82,7 @@ const Navbar = () => {
           </span>
         </div>
         <div
-          className={`h-[18vh] w-full bg-customDarkBlue flex justify-center items-center lg:h-screen lg:absolute lg:left-[80vw] ${
+          className={`h-[18vh] w-full bg-customDarkBlue cursor-pointer flex justify-center items-center lg:h-screen lg:absolute lg:left-[80vw] ${
             toggled ? "lg:w-[20vw]" : "lg:w-0"
           } lg:hover:bg-building lg:hover:bg-cover lg:transition-all lg:duration-500`}
         >

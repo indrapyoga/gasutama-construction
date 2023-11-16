@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home/Home";
+import WWDPages from "./pages/WhatWeDo/WWDPages";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
     ],
+  },
+  {
+    path: "/what-we-do",
+    element: <WWDPages />,
   },
 ]);
 function App() {
