@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import Architecture3 from "../../assets/architecture3.jpg";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
   return (
     <section className="flex flex-col py-10 bg-customDarkBlue lg:flex-row lg:py-0">
       <div className="relative h-[45vh] w-full lg:w-[57vw] lg:h-[70vh]">
@@ -27,7 +29,10 @@ const AboutUs = () => {
           specific requirements and providing a seamless delivery of their
           desired scheme
         </span>
-        <div className="flex border border-white justify-center p-3 lg:mr-auto">
+        <div
+          className="flex border border-white justify-center p-3 lg:mr-auto cursor-pointer"
+          onClick={() => navigate("/about-us")}
+        >
           <span className="text-white uppercase font-semibold">
             FIND out more
           </span>
