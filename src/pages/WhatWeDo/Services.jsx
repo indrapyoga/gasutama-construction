@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Services = () => {
   const dataServices = [
     {
@@ -45,11 +43,6 @@ const Services = () => {
       bg: "bg-tujuh",
     },
   ];
-  const [hover, setHover] = useState(null);
-  const onMouseOver = (index) => {
-    setHover(index);
-    console.log(hover);
-  };
   return (
     <div className="flex flex-col w-full py-5 px-4 bg-customDarkBlue gap-4 text-white lg:grid lg:grid-cols-4">
       <div className="flex flex-col gap-4">
@@ -62,9 +55,11 @@ const Services = () => {
       </div>
       {dataServices.map((data, index) => (
         <div
-          className="relative w-full h-[40vh] border border-white cursor-pointer lg:transition-all lg:duration-500 lg:ease-linear"
+          className="relative w-full h-[40vh] border border-white cursor-pointer
+          group overflow-hidden
+          "
           key={index}
-          onMouseOver={() => onMouseOver(index)}
+          // onMouseOver={() => onMouseOver(index)}
         >
           <div
             className={`absolute inset-0 ${data.bg} bg-cover bg-center`}
@@ -73,7 +68,8 @@ const Services = () => {
           <div className="absolute inset-0 flex flex-col justify-center px-3 text-white gap-5">
             <span className="font-bold text-2xl">{data.title}</span>
             <span
-              className={` ${hover === index ? "lg:visible" : "lg:hidden"} `}
+              // className={` ${hover === index ? "lg:visible" : "lg:hidden"} `}
+              className=" lg:opacity-0 lg:h-0 group-hover:h-fit group-hover:opacity-100 lg:transition-all lg:duration-500 lg:ease-linear"
             >
               {data.description}
             </span>

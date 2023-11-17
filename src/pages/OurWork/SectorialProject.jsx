@@ -9,27 +9,27 @@ const SectorialProject = () => {
       button: "private clients",
       picture: [
         {
-          images: "bg-satu",
+          images: "/1.webp",
           title: "Southwinds, St Georges Hill",
         },
         {
-          images: "bg-dua",
+          images: "/2.webp",
           title: "Garlands, Wentworth Estate",
         },
         {
-          images: "bg-tiga",
+          images: "/3.webp",
           title: "Hampton Place, Wentworth Estate",
         },
         {
-          images: "bg-empat",
+          images: "/4.webp",
           title: "Southwinds, St Georges Hill",
         },
         {
-          images: "bg-lima",
+          images: "/5.webp",
           title: "Garlands, Wentworth Estate",
         },
         {
-          images: "bg-enam",
+          images: "/6.webp",
           title: "Hampton Place, Wentworth Estate",
         },
       ],
@@ -41,15 +41,15 @@ const SectorialProject = () => {
       button: "developers",
       picture: [
         {
-          images: "bg-satu",
+          images: "/1.webp",
           title: "Southwinds, St Georges Hill",
         },
         {
-          images: "bg-dua",
+          images: "/2.webp",
           title: "Garlands, Wentworth Estate",
         },
         {
-          images: "bg-tiga",
+          images: "/3.webp",
           title: "Hampton Place, Wentworth Estate",
         },
       ],
@@ -61,15 +61,15 @@ const SectorialProject = () => {
       button: "commercial clients",
       picture: [
         {
-          images: "bg-satu",
+          images: "/4.webp",
           title: "Southwinds, St Georges Hill",
         },
         {
-          images: "bg-dua",
+          images: "/5.webp",
           title: "Garlands, Wentworth Estate",
         },
         {
-          images: "bg-tiga",
+          images: "/6.webp",
           title: "Hampton Place, Wentworth Estate",
         },
       ],

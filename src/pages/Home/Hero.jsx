@@ -1,8 +1,8 @@
 import { Carousel } from "antd";
 import Navbar from "../../components/Navbar";
-import Architecture1 from "../../assets/architecture1.jpg";
-import Architecture2 from "../../assets/architecture2.jpg";
-import Architecture3 from "../../assets/architecture3.jpg";
+import Architecture1 from "../../assets/architecture1.webp";
+import Architecture2 from "../../assets/architecture2.webp";
+import Architecture3 from "../../assets/architecture3.webp";
 import {
   FaFacebookF,
   FaInstagram,

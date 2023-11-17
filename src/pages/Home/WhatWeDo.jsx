@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import Architecture1 from "../../assets/architecture1.jpg";
+import Architecture1 from "../../assets/architecture1.webp";
 
 const WhatWeDo = () => {
   return (

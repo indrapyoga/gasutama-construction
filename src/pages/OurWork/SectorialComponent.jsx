@@ -24,10 +24,17 @@ const SectorialComponent = (props) => {
       <div className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-10">
         {props.data.picture.map((data, index) => (
           <div
-            className={`relative w-full h-[30vh] lg:hover:border-neutral-400 transition-all duration-500 ease-in lg:bg-no-repeat ${data.images} bg-cover lg:hover:bg-center bg-left-bottom lg:hover:border-b-4`}
+            // className={`relative w-full h-[30vh] lg:hover:border-neutral-400 transition-all duration-500
+            // ease-in lg:bg-no-repeat ${data.images} bg-cover lg:hover:bg-center bg-left-bottom lg:hover:border-b-4`}
+            className="relative w-full h-[30vh] lg:hover:border-neutral-400 transition-all duration-500 ease-in overflow-hidden group cursor-pointer"
             key={index}
           >
-            <div className={`absolute inset-0 `}></div>
+            <img
+              src={`${data.images}`}
+              alt=""
+              className="h-full w-full scale-150 object-cover group-hover:scale-100 transition-all duration-300 ease-in"
+            />
+            {/* <div className={`absolute inset-0 `}></div> */}
             <div className="absolute inset-0 bg-customDarkBlue bg-opacity-20"></div>
             <div className="absolute bottom-5 px-4 text-white">
               <span className="font-bold antialiased">{data.title}</span>

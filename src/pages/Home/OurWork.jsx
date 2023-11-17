@@ -1,9 +1,9 @@
 import { Carousel } from "antd";
 import { useEffect } from "react";
 
-import Architecture1 from "../../assets/architecture1.jpg";
-import Architecture2 from "../../assets/architecture2.jpg";
-import Architecture3 from "../../assets/architecture3.jpg";
+import Architecture1 from "../../assets/architecture1.webp";
+import Architecture2 from "../../assets/architecture2.webp";
+import Architecture3 from "../../assets/architecture3.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +12,7 @@ const OurWork = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
-const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <section className="flex flex-col py-10 bg-customDarkBlue lg:flex-row lg:py-0">
       <div className="lg:w-[57vw] lg:h-full">
@@ -75,7 +75,10 @@ const navigate = useNavigate()
           superior service and products, from initial concept right through to
           final delivery.
         </span>
-        <div onClick={()=>navigate('/our-work')} className="flex border border-white justify-center p-3 lg:text-[14px] lg:mr-auto cursor-pointer">
+        <div
+          onClick={() => navigate("/our-work")}
+          className="flex border border-white justify-center p-3 lg:text-[14px] lg:mr-auto cursor-pointer"
+        >
           <span className="text-white uppercase font-semibold">
             see more projects
           </span>
