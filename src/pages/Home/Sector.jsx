@@ -7,21 +7,21 @@ const Sector = () => {
       title: "Private Clients",
       description:
         "An exclusive service for individuals, delivering timeless architecture tailored to provide exceptional forever-homes",
-      bg: "bg-private",
+      bg: "/private.webp",
       hover: false,
     },
     {
       title: "Developers",
       description:
         "Feasibility studies, planning submissions and technical working drawings, optimising the value of house types and site layouts",
-      bg: "bg-mansion",
+      bg: "/mansion.webp",
       hover: false,
     },
     {
       title: "Commercial",
       description:
         "Design and delivery of health care, commercial, education, institutional property and regeneration projects across the country",
-      bg: "bg-building",
+      bg: "/building.webp",
       hover: false,
     },
   ]);
