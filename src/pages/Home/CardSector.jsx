@@ -7,9 +7,11 @@ const CardSector = (props) => {
       onMouseOver={props.onMouseOver}
       onMouseLeave={props.onMouseLeave}
     >
-      <div
-        className={`absolute inset-0 ${props.data.bg} bg-center bg-cover px-4 py-16`}
-      ></div>
+      <img
+        src={props.data.bg}
+        alt=""
+        className="absolute inset-0 h-full w-full"
+      />
       <div
         className={`absolute inset-0 bg-customDarkBlue bg-opacity-80 z-0 lg:${
           props.data.hover ? "" : "hidden"
