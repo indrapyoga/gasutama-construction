@@ -9,9 +9,10 @@ const HeroOurWork = () => {
       <div className="flex flex-col lg:relative">
         <div className="relative h-[50vh] w-full lg:h-[70vh]">
           {/* Backgornd */}
-          <div
-            className={`absolute inset-0 bg-mansion bg-cover bg-center lg:transition-all lg:duration-500 lg:ease-linear`}
-          ></div>
+          <img
+            src="/mansion.webp"
+            className={`absolute inset-0 object-cover object-center lg:transition-all lg:duration-500 lg:ease-linear w-full h-full`}
+          ></img>
           {/* Layer  */}
           <div className="absolute inset-0 bg-customDarkBlue bg-opacity-40"></div>
           {/* Tulisan */}

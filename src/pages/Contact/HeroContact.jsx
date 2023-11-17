@@ -9,9 +9,10 @@ const HeroContact = () => {
       <div className="flex flex-col lg:relative">
         <div className="relative h-[50vh] w-full lg:h-[70vh]">
           {/* Backgornd */}
-          <div
-            className={`absolute inset-0 bg-lima bg-cover bg-center lg:transition-all lg:duration-500 lg:ease-linear`}
-          ></div>
+          <img
+            src="/5.webp"
+            className={`absolute inset-0 object-cover object-center h-full w-full lg:transition-all lg:duration-500 lg:ease-linear`}
+          ></img>
           {/* Layer  */}
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           {/* Tulisan */}

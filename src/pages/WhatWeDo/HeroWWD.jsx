@@ -9,54 +9,58 @@ const HeroWWD = () => {
       title: "Private Clients",
       description:
         "An exclusive service for individuals, delivering timeless architecture tailored to provide exceptional forever-homes",
-      bg: "bg-private",
+      bg: "/private.webp",
       hover: false,
     },
     {
       title: "Developers",
       description:
         "Feasibility studies, planning submissions and technical working drawings, optimising the value of house types and site layouts",
-      bg: "bg-mansion",
+      bg: "/mansion.webp",
       hover: false,
     },
     {
       title: "Commercial",
       description:
         "Design and delivery of health care, commercial, education, institutional property and regeneration projects across the country",
-      bg: "bg-building",
+      bg: "/building.webp",
       hover: false,
     },
   ]);
   const [indexHover, setIndexHover] = useState(null);
 
+  const [backgroundImg, setbackgroundImg] = useState("/1.webp");
   const handlerHover = ({ index }) => {
-    setIndexHover(index);
+    switch (index) {
+      case 0:
+        setbackgroundImg("/private.webp");
+        break;
+      case 1:
+        setbackgroundImg("/building.webp");
+        break;
+      case 2:
+        setbackgroundImg("/mansion.webp");
+        break;
+
+      default:
+        setbackgroundImg("/1.webp");
+        break;
+    }
   };
   const onMouseLeave = () => {
     setIndexHover(null);
   };
-  function backgroundImg() {
-    switch (indexHover) {
-      case 0:
-        return "bg-private";
-      case 1:
-        return "bg-building";
-      case 2:
-        return "bg-mansion";
-
-      default:
-        return "bg-satu";
-    }
-  }
   return (
     <div className="relative w-full box-border">
       <Navbar />
       <div className="flex flex-col lg:relative">
         <div className="relative h-[50vh] w-full lg:h-[140vh]">
           {/* Backgornd */}
-          <div
-            className={`absolute inset-0 ${backgroundImg()} bg-cover bg-center lg:transition-all lg:duration-500 lg:ease-linear`}
-          ></div>
+          <img
+            src={backgroundImg}
+            alt=""
+            className={`absolute inset-0 w-full h-full object-cover`}
+          ></img>
           {/* Layer  */}
           <div className="absolute inset-0 bg-customDarkBlue bg-opacity-20"></div>
           {/* Tulisan */}

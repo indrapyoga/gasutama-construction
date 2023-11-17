@@ -21,7 +21,7 @@ const SectorialComponent = (props) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-10">
+      <div className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-10 gap-5">
         {props.data.picture.map((data, index) => (
           <div
             // className={`relative w-full h-[30vh] lg:hover:border-neutral-400 transition-all duration-500

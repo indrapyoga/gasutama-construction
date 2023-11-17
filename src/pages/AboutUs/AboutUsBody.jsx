@@ -6,7 +6,7 @@ const AboutUsBody = () => {
         "Home to some of the most talented designers, Ascot Design has a team of over 50. Collectively, we bring a wealth of experience and expertise to each project, with a commitment to complete customer satisfaction.",
       ],
       button: "see our people",
-      image: "bg-satu",
+      image: "/1.webp",
     },
     {
       title: "Careers",
@@ -16,7 +16,7 @@ const AboutUsBody = () => {
         "We are always looking for bright individuals to join our team so please get in touch if you think that could be you.",
       ],
       button: "Apply now",
-      image: "bg-dua",
+      image: "/2.webp",
     },
     {
       title: "Corporate Social Responsibility",
@@ -24,7 +24,7 @@ const AboutUsBody = () => {
         "We believe that we have a corporate social responsibility to have a positive impact on society and have an obligation to put in place ethical principles which support individuals, the local community and the environment.",
       ],
       button: "read more",
-      image: "bg-tiga",
+      image: "/3.webp",
     },
   ];
   return (
@@ -61,9 +61,10 @@ const AboutUsBody = () => {
           } lg:px-0 lg:py-0 lg:h-[70vh]`}
           key={i}
         >
-          <div
-            className={`w-full flex ${data.image} h-[30vh] bg-cover bg-center lg:h-full lg:w-[57vw]`}
-          ></div>
+          <img
+            src={data.image}
+            className={`w-full flex h-[30vh] object-cover object-center lg:h-full lg:w-[57vw]`}
+          ></img>
           <div className="flex flex-col gap-4 antialiased lg:flex-1 lg:justify-center lg:px-5">
             <span className="text-2xl lg:text-6xl">{data.title}</span>
             {data.description.map((data, i) => (

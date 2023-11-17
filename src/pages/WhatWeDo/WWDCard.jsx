@@ -8,9 +8,10 @@ const WWDCard = (props) => {
       onMouseOver={props.onMouseOver}
       onMouseLeave={props.onMouseLeave}
     >
-      <div
-        className={`absolute inset-0 ${props.data.bg} bg-center bg-cover px-4 py-16 lg:hidden`}
-      ></div>
+      <img
+        src={props.data.bg}
+        className={`absolute inset-0 object-cover lg:hidden h-full w-full`}
+      ></img>
       <div
         className={`absolute inset-0 bg-customDarkBlue bg-opacity-80 z-0 
         
