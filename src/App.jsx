@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 import OurWorkPages from "./pages/OurWork/OurWorkPages";
 import WWDPages from "./pages/WhatWeDo/WWDPages";
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/about-us",
     element: <AboutUs />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
 ]);
 function App() {
